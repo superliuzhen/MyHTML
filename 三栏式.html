@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三栏式</title>
+		<style type="text/css">
+			div{border:1px #999 solid;
+				background-color: #eee;
+				padding: 20px;
+				margin: 0;
+				}
+			.a1{
+				position: relative;
+	  	        height:auto;
+	  	        overflow: auto;   
+			}
+			.b1{
+				float:left;
+				width: 200px;
+				text-align:center;
+			}
+			.c1{
+				float: left;
+				width: 80px;
+				height: 80px;
+				padding:0;
+				display: table;
+			}
+			.c2,.c3,.c4,.c5{
+				width:80px;
+				height:80px;
+				padding: 0;
+				display: table;
+			}
+			.c2,.c3,.c4{
+				margin-bottom: 20px;
+			}
+			.b2{
+				width: auto;
+				left:280px;
+				right:160px;
+				position: absolute;
+			}
+			.b3{
+				float: right;
+				text-align: center;
+				}
+			span{
+				display:table-cell;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="a1">
+		<div class="b1">
+			<div class="c1">
+			 <span>团队logo<br />80x80</span>
+			</div>
+			团队
+		</div>
+		<div class="b2">
+			<h4>标题一</h4>
+			<h4>标题二</h4>
+			<p>内容第一段自立以来，虎牙直播一</p>
+			<p>内容第二段虎牙的革新与优化</p>
+		</div>
+		<div class="b3">
+			<div class="c2">
+			<span>个人logo<br />80x80</span>
+			</div>
+			<div class="c3">
+			<span>个人logo<br />80x80</span>
+			</div>
+			<div class="c4">
+			<span>个人logo<br />80x80</span>
+			</div>
+			<div class="c5">
+			<span>个人logo<br />80x80</span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
