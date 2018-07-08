@@ -8,6 +8,7 @@
 				font-size: 12px;
 				border:1px rgb(222,222,222) solid;
 			}
+			body{background-color: #DEDEDE;}
 			p{
 				text-indent: 2em;
 			}
@@ -16,6 +17,10 @@
 				padding: 20px;
 				background-color: white;
 				}
+			.a2>div{
+				float:left;
+			}
+			.a3{float:left;width: 100%;}
 			.a2 h3,.a2 h4{color:gray;}
 			#a1{padding: 0;margin: 0;}
 			#a1 li{
@@ -26,32 +31,52 @@
 				color: white;
 				text-decoration: none;
 			}
-			#b3 div{width:287px;text-align: center;}
+			#b3 div{width:140px;text-align: center;padding: 10px;float:left;}
 			#b3 span{display: inline-block;margin-top: 0px;margin-bottom: 20px;}
+			#b3 img{
+				width: 120px;
+				height: 80px;
+			}
+			
 			a:hover{color:blue;}
+			
+			#b4,#b1,#b2,#b3{width: 65%;}
+			#b5{
+				position: relative;
+				float:right;
+				width: 24%;
+				overflow: auto;
+				margin-left: 0;
+			}
 			#f1{
-				width: 500px;
+				width:85%;
                 text-align: right;
+                margin-left: 10px;
                 padding: 0px;
                 margin-top: 0;
                 margin-bottom: 0;
                 border: none;
 			}
-			#f1 label,#f2 label{display: block;margin: 10px;}
 			#f2{
-				width: 500px;
+				width: 60%;
                 text-align: left;
-                margin-left: 295px;
                 padding:0 ;
-                margin-top: 0;
+                margin-top: 10px;
                 margin-bottom: 0;
+                margin-left: 75px;
                 border: none;
 			}
-			#f3{position: relative;
-                height: 40px;
-                border: none;		
+			#f3{
+				padding-left: 40px;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				margin-top: 10px;
+				border: none;
 			}
-			#f3 textarea{position: absolute;top:0;right:100px;}
+			textarea{
+				vertical-align: top;
+			}
 			#back{
 				height: 50px;
 				width: 50px;
@@ -67,12 +92,13 @@
 				text-decoration: none;
 				display: table-cell;
 			    vertical-align: middle;
+			    color: white;
 			}
 		</style>
 	</head>
 	<body>
-	<div id="a1" style="background-color:#272A4B;">
-		<h1 style="margin: 0;padding: 0;"><img src="http://baidulogo.bj.bcebos.com/logo/uk5j1kh878r5rjgeirni4uzxse8yijlc.gif" style="height: 60px;
+	<div id="a1" style="background-color:rgb(51,51,51);">
+		<h1 style="margin: 0;padding: 0;"><img src="img/2018-07-06_171159.png" style="height: 60px;
 			width: 150px"></h1>
 		<ul style="position: absolute;top:10px;right:0;">
 			<li><a href="#b1">导航链接一</a></li>
@@ -82,6 +108,45 @@
 		</ul>
 	</div>
 	<div class="a2" style="background-color:rgb(222,222,222);">
+		<div id="b5">
+       	 	<h3 style="color: black;border-left:3px gray solid;padding: 8px;">这里以后是一个侧栏，这是侧栏的标题</h3>
+       	 	<form action="css/css-99.css" method="post">
+       	 		<div id="f1">
+       	 		请输入邮箱地址：<input type="email" value=""  /><br />
+       	 		<label style="font-weight:400;color:#999999;">*邮箱地址按要求格式输入</label><br /><br />
+       	 		请输入密码：<input type="password" /><br /><br />
+       	 	        请再次输入密码：<input tupe="password"  /><br />
+       	 		<label style="font-weight:400;color:#999999;">*密码请为6-16位英文或数字</label><br /><br />
+       	 		</div>
+       	 		<div id="f2">
+       	 		<label>性别：
+       	 		<input type="radio" name="male-female" id="1"checked="checked" / >男
+       	 		<input type="radio" name="male-female" id="2" float:left/>女</label><br /><br />
+       	 		
+       	 		<label>城市：
+       	 		<select name="city">
+       	 			<option id="beijing">北京</option>
+       	 			<option id="shanghai" selected="selected">上海</option>
+       	 			<option id="shenzhen">深圳</option>
+       	 			<option id="guangzhou">广州</option>
+       	 		</select></label><br /><br />
+       	 		
+       	 		<label>爱好：
+       	 		<input type="checkbox" name="sport" id="sport"/>运动
+       	 		<input type="checkbox" name="art" id="art"/>艺术
+       	 		<input type="checkbox" name="science" id="science"/>科学</label><br /><br />
+       	 		</div>
+       	 		
+       	 		<div id="f3">
+       	 		<label>个人描述:
+       	 		<textarea name="personality" rows="5" cols="22" placeholder="这是一个多行文本输入框，请输入您的个人描述" ></textarea>
+       	 		</label>
+       	 		</div>
+       	 		
+       	 		<button type="submit" id="submit" name="submit" style="background-color: #3385FF;color: white;width: 100%;border-radius: 6px;">确认提交</button>
+       	 		
+       	 	</form>
+       	 	</div>
 		<div id="b1">
 		<h2>文章一级标题</h2>
 		<h3>文章二级标题</h3>
@@ -140,45 +205,9 @@
        	 		<tr style="background-color: rgb(200,200,200);"><td>总计</td><td colspan="2">1000</td></tr> <!--colspan(占几列)和rowspan(占几行)-->
        	 	</table>
        	 </div>
-       	<div id="b5">
-       	 	<h3 style="color: black;border-left:3px gray solid;padding: 8px;">这里以后是一个侧栏，这是侧栏的标题</h3>
-       	 	<form action="css/css-99.css" method="post">
-       	 		<div id="f1">
-       	 		请输入邮箱地址：<input type="email" value="" placeholder="这是一个文本输入框" />
-       	 		<label style="font-weight:400;">邮箱地址按要求格式输入</label>
-       	 		请输入密码：<input type="password" placeholder="这是一个文本输入框" /><br /><br />
-       	 	        请再次输入密码：<input tupe="password" placeholder="这是一个文本输入框" />
-       	 		<label style="font-weight:400;">密码请为6-16位英文或数字</label>
-       	 		</div>
-       	 		<div id="f2">
-       	 		<label>性别：
-       	 		<input type="radio" name="male-female" id="1"checked="checked" / >男
-       	 		<input type="radio" name="male-female" id="2" float:left/>女</label>
-       	 		
-       	 		<label>城市：
-       	 		<select name="city">
-       	 			<option id="beijing">北京</option>
-       	 			<option id="shanghai" selected="selected">上海</option>
-       	 			<option id="shenzhen">深圳</option>
-       	 			<option id="guangzhou">广州</option>
-       	 		</select></label>
-       	 		
-       	 		<label>爱好：
-       	 		<input type="checkbox" name="sport" id="sport"/>运动
-       	 		<input type="checkbox" name="art" id="art"/>艺术
-       	 		<input type="checkbox" name="science" id="science"/>科学</label>
-       	 		</div>
-       	 		<div id="f3">
-       	 		<span style="position: absolute;top: 0;left:265px">个人描述：</span>
-       	 		<textarea name="personality" rows="5" cols="111" placeholder="这是一个多行文本输入框，请输入您的个人描述" ></textarea>
-       	 		</div>
-       	 		<button type="submit" id="submit" name="submit" style="background-color: #3385FF;color: white;width: 100%;border-radius: 6px;">确认提交</button>
-       	 		
-       	 	</form>
-       	 	</div>
     </div>
-    <div class="a3" style="background-color:#272A4B;height: 50px;text-align: center;line-height: 50px;color: white;">
-    	<address>版权所有©</address>
+    <div class="a3" style="background-color:rgb(51,51,51);height: 50px;text-align: center;line-height: 50px;color: white;">
+    	<footer>版权所有©</footer>
     </div>
     <div id="back"><a href="#a1">返回<br />顶部</a></div>
 	</body>
